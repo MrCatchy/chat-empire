@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class RegisterScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
-  static String loginscreen = 'login_screen';
+  _RegisterScreenState createState() => _RegisterScreenState();
+  static String id = 'registration_screen';
 }
 
 @override
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
@@ -16,7 +16,17 @@ class _LoginScreenState extends State<LoginScreen> {
           children: <Widget>[
             SizedBox(
               height: constraints.maxHeight / 5,
+              // MediaQuery.of(context).size.height / 1.5,
             ),
+            // Text(
+            //   "Chat Empire",
+            //   style: TextStyle(
+            //     fontWeight: FontWeight.bold,
+            //     fontSize: 50.0,
+            //     color: Colors.orangeAccent,
+            //   ),
+            // ),
+
             TextField(
               decoration: InputDecoration(
                 hintText: "Email",
@@ -53,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: constraints.maxHeight / 5,
               // MediaQuery.of(context).size.height / 1.5,
             ),
+
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   primary: Colors.black12,
@@ -63,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     right: 10,
                   )),
               onPressed: () {
-                Navigator.pushNamed(context, LoginScreen.loginscreen);
+                Navigator.pushNamed(context, RegisterScreen.id);
               },
               child: Text(
                 "Register",
